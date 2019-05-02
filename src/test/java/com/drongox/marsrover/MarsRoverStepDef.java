@@ -33,7 +33,7 @@ public class MarsRoverStepDef
     assertThat(outputPosition).isEqualTo(output);
   }
 
-  @When("^Mars Rover receives a command ([F])$")
+  @When("^Mars Rover receives a command ([F|B])$")
   public void marsRoverReceivesACommand(String command) {
     marsRover.execute(command);
   }

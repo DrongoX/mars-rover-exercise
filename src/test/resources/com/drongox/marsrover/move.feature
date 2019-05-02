@@ -16,3 +16,13 @@ Feature: Mars Rover should be able to move forward or backward
       | 0 | 2 | W           | W(0,2) |
       | 5 | 3 | E           | E(5,3) |
 
+  Scenario Outline:
+    Given a Mars Rover situated at <x>, <y> and oriented <orientation>
+    When Mars Rover receives a command B
+    And Mars Rover is asked to report his position
+    Then the output is <output>
+    Examples:
+      | x | y | orientation | output |
+      | 1 | 2 | W           | W(2,2) |
+      | 1 | 2 | E           | E(0,2) |
+      | 1 | 2 | N           | N(1,1) |

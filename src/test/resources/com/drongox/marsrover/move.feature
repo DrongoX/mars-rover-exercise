@@ -10,3 +10,9 @@ Feature: Mars Rover should be able to move forward or backward
       | 1 | 2 | W           | W(0,2) |
       | 1 | 2 | E           | E(2,2) |
       | 1 | 2 | N           | N(1,3) |
+      | 1 | 2 | S           | S(1,1) |
+      | 1 | 5 | N           | N(1,5) |
+      | 1 | 0 | S           | S(1,0) |
+      | 0 | 2 | W           | W(0,2) |
+      | 5 | 3 | E           | E(5,3) |
+

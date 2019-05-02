@@ -27,9 +27,14 @@ public class MarsRoverStepDef
   }
 
 
-  @Then("the output is (.*)")
+  @Then("^the output is (.*)$")
   public void theOutputIs(String output)
   {
     assertThat(outputPosition).isEqualTo(output);
+  }
+
+  @When("^Mars Rover receives a command ([F])$")
+  public void marsRoverReceivesACommand(String command) {
+    marsRover.execute(command);
   }
 }
